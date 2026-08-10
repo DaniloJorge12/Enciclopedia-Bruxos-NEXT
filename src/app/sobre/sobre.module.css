@@ -12,7 +12,6 @@
   text-align: center;
   margin-bottom: 1rem;
   color: #111827;
-  letter-spacing: -0.025em;
 }
 
 .descricao {
@@ -25,7 +24,7 @@
 }
 
 
-.mvvGrid {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
@@ -49,7 +48,6 @@
 .curso:hover,
 .Professores:hover,
 .integrantes:hover {
-  transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
 }
 
