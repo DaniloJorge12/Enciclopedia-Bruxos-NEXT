@@ -8,7 +8,7 @@ export default function sobre() {
                 Este espaço pode ser adaptado com a apresentação, missão ou contexto do seu projeto.
             </p>
 
-            <div className={styles.mvvGrid}>
+            <div className={styles.grid}>
                 <div className={styles.turma}>
                     <h3>🚀 Turma </h3>
                     <p>2TDS1</p>
