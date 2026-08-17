@@ -6,6 +6,7 @@ import Header from '@/components/Header/Header';
 import styles from './personagens.module.css';
 import CharacterCard from '@/components/CharacterCard/CharacterCard';
 import CharacterModal from '@/components/CharacterModal/CharacterModal';
+import { Toaster } from 'react-hot-toast';
 
 export default function Personagens() {
     const [personagens, setPersonagens] = useState([]);
@@ -42,7 +43,12 @@ export default function Personagens() {
             </section>
 
             <section className={styles.lista}>
-                {carregando && <p className={styles.mensagem}>Carregando personagens...</p>}
+                {carregando && (
+                    <div className={styles.loading}>
+                        <div className={styles.spinner}></div>
+                        <p>Carregando personagens...</p>
+                    </div>
+                )}
 
                 {erro && <p className={styles.erro}>{erro}</p>}
 
@@ -63,6 +69,7 @@ export default function Personagens() {
                 personagem={personagemSelecionado}
                 onClose={() => setPersonagemSelecionado(null)}
             />
+            <Toaster />
         </main>
     );
 }
