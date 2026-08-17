@@ -1,0 +1,159 @@
+.personagens {
+    min-height: 100vh;
+
+    background: #080b14;
+
+    color: #f5f1e8;
+}
+
+
+/* INTRODUÇÃO */
+
+.introducao {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 150px 0 60px;
+}
+
+.sectionLabel {
+    margin: 0 0 15px;
+
+    color: #d4af37;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.introducao h1 {
+    margin: 0 0 20px;
+
+    font-size: clamp(3rem, 7vw, 5rem);
+
+    line-height: 1;
+}
+
+.description {
+    margin: 0;
+
+    color: #aaaeba;
+
+    font-size: 1.1rem;
+}
+
+
+/* LISTA */
+
+.lista {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-bottom: 100px;
+}
+
+
+/* GRID */
+
+.grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* CARD */
+
+.card {
+    padding: 25px;
+
+    background: #0d1220;
+
+    border: 1px solid #292d3d;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d4af37;
+}
+
+.card h2 {
+    margin: 0 0 20px;
+
+    color: #d4af37;
+
+    font-size: 1.3rem;
+}
+
+.card p {
+    margin: 8px 0;
+
+    color: #aaaeba;
+
+    line-height: 1.5;
+}
+
+
+/* MENSAGENS */
+
+.mensagem,
+.erro {
+    padding: 50px 0;
+
+    text-align: center;
+
+    font-size: 1.1rem;
+}
+
+.mensagem {
+    color: #d4af37;
+}
+
+.erro {
+    color: #e57373;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .introducao {
+        padding-top: 120px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}

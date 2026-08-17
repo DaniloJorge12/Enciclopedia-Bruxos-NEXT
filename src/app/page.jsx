@@ -38,15 +38,9 @@ export default function Home() {
                     SOBRE A WIZARDDEX
                 </p>
 
-                <h2>
-                    O mundo mágico na palma da sua mão.
-                </h2>
+                <h2>O mundo mágico na palma da sua mão.</h2>
 
-                <p>
-                    A WizardDex é uma enciclopédia digital criada para
-                    reunir informações sobre os personagens do universo
-                    mágico em um só lugar.
-                </p>
+                <p>A WizardDex é uma enciclopédia digital criada para reunir informações sobre os personagens do universo mágico em um só lugar.</p>
             </section>
 
             <section className={styles.technologies}>
