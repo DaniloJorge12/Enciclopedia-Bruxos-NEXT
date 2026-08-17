@@ -65,15 +65,12 @@
     .header {
         height: 75px;
     }
-
     .logo img {
         width: 115px;
     }
-
     .nav {
         gap: 15px;
     }
-
     .link {
         font-size: 0.85rem;
     }
