@@ -1,9 +1,9 @@
 .pagina {
     min-height: 100vh;
     background:
-        linear-gradient(rgba(5, 8, 18, 0.72), rgba(5, 8, 18, 0.88)),
+        linear-gradient(var(--overlay-imagem), var(--overlay-imagem)),
         url("/images/home-bg.jpg") center / cover fixed;
-    color: white;
+    color: var(--texto);
 }
 
 .container {
@@ -20,14 +20,14 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--texto);
 }
 
 .descricao {
     font-size: 1.125rem;
     line-height: 1.6;
     text-align: center;
-    color: #d1d5db;
+    color: var(--texto-secundario);
     max-width: 650px;
     margin: 0 auto 3rem;
 }
@@ -42,8 +42,8 @@
 .curso,
 .professores,
 .integrantes {
-    background: rgba(17, 22, 36, 0.78);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: color-mix(in srgb, var(--fundo-card) 82%, transparent);
+    border: 1px solid var(--borda);
     border-radius: 16px;
     padding: 1.5rem;
     backdrop-filter: blur(10px);
@@ -67,7 +67,7 @@
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.75rem;
-    color: #ffffff;
+    color: var(--texto);
 
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@
 .professores p,
 .integrantes p {
     margin: 0.35rem 0;
-    color: #c5c7ce;
+    color: var(--texto-secundario);
     font-size: 0.975rem;
     line-height: 1.4;
 }

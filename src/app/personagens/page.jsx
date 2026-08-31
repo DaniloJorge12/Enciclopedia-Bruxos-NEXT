@@ -8,6 +8,8 @@ import CharacterCard from '@/components/CharacterCard/CharacterCard';
 import CharacterModal from '@/components/CharacterModal/CharacterModal';
 import { Toaster } from 'react-hot-toast';
 
+const PERSONAGENS_KEY = 'wizarddex-personagens';
+
 export default function Personagens() {
     const [personagens, setPersonagens] = useState([]);
     const [carregando, setCarregando] = useState(true);
@@ -15,10 +17,27 @@ export default function Personagens() {
     const [personagemSelecionado, setPersonagemSelecionado] = useState(null);
 
     useEffect(() => {
+        const personagensSalvos = localStorage.getItem(PERSONAGENS_KEY);
+
+        if (personagensSalvos) {
+            try {
+                const dados = JSON.parse(personagensSalvos);
+
+                if (Array.isArray(dados)) {
+                    setPersonagens(dados);
+                    setCarregando(false);
+                    return;
+                }
+            } catch {
+                localStorage.removeItem(PERSONAGENS_KEY);
+            }
+        }
+
         async function buscarPersonagens() {
             try {
                 const resposta = await axios.get('https://hp-api.onrender.com/api/characters');
                 setPersonagens(resposta.data);
+                localStorage.setItem(PERSONAGENS_KEY, JSON.stringify(resposta.data));
             } catch (error) {
                 console.error(error);
                 setErro('Não foi possível carregar os personagens.');
@@ -69,7 +88,8 @@ export default function Personagens() {
                 personagem={personagemSelecionado}
                 onClose={() => setPersonagemSelecionado(null)}
             />
-            <Toaster />
+
+            <Toaster position="bottom-right" />
         </main>
     );
 }

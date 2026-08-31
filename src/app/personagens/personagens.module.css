@@ -1,7 +1,7 @@
 .personagens {
     min-height: 100vh;
-    background: #080b14;
-    color: #f5f1e8;
+    background: var(--fundo);
+    color: var(--texto);
 }
 
 .introducao {
@@ -13,7 +13,7 @@
 
 .sectionLabel {
     margin: 0 0 15px;
-    color: #d4af37;
+    color: var(--dourado);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 3px;
@@ -27,7 +27,7 @@
 
 .description {
     margin: 0;
-    color: #aaaeba;
+    color: var(--texto-secundario);
     font-size: 1.1rem;
 }
 
@@ -44,31 +44,6 @@
     gap: 20px;
 }
 
-.card {
-    padding: 25px;
-    background: #0d1220;
-    border: 1px solid #292d3d;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #d4af37;
-}
-
-.card h2 {
-    margin: 0 0 20px;
-    color: #d4af37;
-    font-size: 1.3rem;
-}
-
-.card p {
-    margin: 8px 0;
-    color: #aaaeba;
-    line-height: 1.5;
-}
-
 .mensagem,
 .erro {
     padding: 50px 0;
@@ -77,7 +52,7 @@
 }
 
 .mensagem {
-    color: #d4af37;
+    color: var(--dourado);
 }
 
 .erro {
@@ -85,26 +60,16 @@
 }
 
 @media (max-width: 1000px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .grid { grid-template-columns: repeat(3, 1fr); }
 }
-
 
 @media (max-width: 750px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-
 @media (max-width: 500px) {
-    .introducao {
-        padding-top: 120px;
-    }
-    .grid {
-        grid-template-columns: 1fr;
-    }
+    .introducao { padding-top: 120px; }
+    .grid { grid-template-columns: 1fr; }
 }
 
 .loading {
@@ -114,24 +79,19 @@
     justify-content: center;
     gap: 1rem;
     min-height: 300px;
-    color: white;
+    color: var(--texto);
 }
 
 .spinner {
     width: 45px;
     height: 45px;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    border-top: 4px solid #c9a84c;
+    border: 4px solid rgba(127, 127, 127, 0.2);
+    border-top: 4px solid var(--dourado);
     border-radius: 50%;
     animation: girar 0.8s linear infinite;
 }
 
 @keyframes girar {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }

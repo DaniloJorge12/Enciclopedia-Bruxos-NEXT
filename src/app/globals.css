@@ -7,3 +7,35 @@ body {
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --fundo: #080b14;
+    --fundo-secundario: #0d1220;
+    --fundo-card: #111624;
+    --texto: #f5f1e8;
+    --texto-secundario: #aaaeba;
+    --borda: #292d3d;
+    --dourado: #d4af37;
+    --dourado-claro: #f1d77a;
+}
+
+html[data-theme='light'] {
+    --fundo: #f3f1eb;
+    --fundo-secundario: #e8e5dc;
+    --fundo-card: #ffffff;
+    --texto: #17181c;
+    --texto-secundario: #5d6068;
+    --borda: #d8d4ca;
+    --dourado: #a47e16;
+    --dourado-claro: #7f5d08;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+button,
+a {
+    font: inherit;
+}
