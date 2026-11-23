@@ -35,7 +35,7 @@ export default function Personagens() {
 
         async function buscarPersonagens() {
             try {
-                const resposta = await axios.get('https://hp-api.onrender.com/api/characters');
+                const resposta = await axios.get('https://raw.githubusercontent.com/KostaSav/hp-api/master/data/characters.json');
                 setPersonagens(resposta.data);
                 localStorage.setItem(PERSONAGENS_KEY, JSON.stringify(resposta.data));
             } catch (error) {
